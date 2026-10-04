@@ -509,45 +509,6 @@ EOF is also detected and handled explicitly.
 
 > **Note:** the current `main()` reads and discards the first input line as a test-case number before displaying the REPL welcome message. When running the program manually, enter a value such as `1` on the first line before entering Scheme expressions.
 
----
-
-## Build Requirements
-
-Because the source uses modern library features such as `<print>`, `std::println`, `std::format`, ranges, and `std::variant`, compile it with a compiler and standard library that provide the required **C++23** support.
-
-Example with a recent GCC version:
-
-```bash
-g++ -std=c++23 -Wall -Wextra -Wshadow -Werror main.cpp -o ourscheme
-```
-
-For debugging, sanitizers can also be enabled:
-
-```bash
-g++ -std=c++23 \
-    -Wall \
-    -Wextra \
-    -Wshadow \
-    -Werror \
-    -fsanitize=address,undefined \
-    main.cpp \
-    -o ourscheme
-```
-
-Run on Linux / macOS:
-
-```bash
-./ourscheme
-```
-
-Run on Windows PowerShell:
-
-```powershell
-.\ourscheme.exe
-```
-
----
-
 ## Source Code Architecture
 
 ```text
@@ -657,7 +618,3 @@ The implementation is intentionally built from the ground up in C++ to demonstra
 ## Language
 
 - C++23
-
-## Author
-
-CYCU Computer Science Project
